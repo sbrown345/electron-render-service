@@ -242,7 +242,7 @@ app.get('/', (req, res) => res.send(printUsage()));
 electronApp.once('ready', () => {
   electronApp.ready = true;
   app.pool = new WindowPool();
-  const listener = app.listen(PORT, HOSTNAME, () => printBootMessage(listener));
+  const listener = app.listen(PORT, () => printBootMessage(listener));
 });
 
 
